@@ -1,0 +1,125 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header styling */
+.header {
+    background-color: #000;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.header h1 a {
+    color: #fff; /* Set the color of the link */
+    text-decoration: none; /* Remove the underline */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Main container styling */
+.main-content {
+    width: 90%;
+    max-width:100%;
+    margin: 120px auto 20px; 
+    background-color: #555;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Recent clips title styling */
+.recent-clips-title {
+    background-color: #aaa;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Video grid styling */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.video {
+    background-color: #000;
+    height: 100px;
+    border-radius: 8px;
+    position: relative; /* Position relative for absolute positioning of play button */
+    overflow: hidden; /* Ensure content does not overflow the rounded corners */
+}
+
+.video a {
+    display: block; /* Make the anchor tag a block element */
+    color: #fff; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    height: 100%; /* Make sure it covers the whole video box */
+    padding: 20px; /* Add padding around the text */
+    text-align: center; /* Center align text */
+}
+
+.play-button {
+    font-size: 3em; /* Large size for the play button */
+    color: #fff; /* Play button color */
+    position: absolute; /* Position the button in the center */
+    top: 50%; /* Move to the center vertically */
+    left: 50%; /* Move to the center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center correctly */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.video:hover .play-button {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.video span {
+    display: block; /* Show video title below the play button */
+    margin-top: 10px; /* Space between the button and the title */
+}
+
+
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-image {
+    width: 50px; /* Set a width that fits your design */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the image and the text */
+    vertical-align: middle; /* Align the image with the text */
+}
